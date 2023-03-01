@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">LISTA INVERSIONISTAS</a>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+          </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="card-body">
+                        <form action="/update/<%= data.ID  %>" method="post">
+                            <div class="form-group">
+                                <input type="text" name="NOMBRE" value="<%= data.NOMBRE %>" placeholder="Nombre" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="DIRECCION" value="<%= data.DIRECCION %>" placeholder="Direccion" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="TELEFONO" value="<%= data.TELEFONO %>" placeholder="Telefono" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Actualizar</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+</body>
+</html>
